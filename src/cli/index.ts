@@ -57,12 +57,33 @@ program
         when: !opts.message,
         validate: (msg) => msg.length > 0 || "Message cannot be empty",
       },
+      {
+        name: "breaking",
+        type: "confirm",
+        message: "Is this a breaking change?",
+        default: false,
+        when: () => !opts.type,
+      },
+      {
+        name: "wantsDescription",
+        type: "confirm",
+        message: "Would you like to add an extended description?",
+        default: false,
+      },
+      {
+        name: "description",
+        type: "editor",
+        message: "Write your extended description (opens your editor):",
+        when: (answers) => answers.wantsDescription === true,
+      },
     ]);
 
     const finalMessage = buildCommitMessage({
       type: opts.type || answers.type,
       scope: opts.scope || answers.scope,
       message: opts.message || answers.message,
+      breaking: answers.breaking,
+      description: answers.description,
     });
 
     if (opts.dryRun) {
