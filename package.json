@@ -5,12 +5,10 @@
   "scripts": {
     "dev": "tsup src/index.ts --watch --onSuccess \"node dist/index.js\"",
     "build": "tsup",
-    "prepare": "npm run build",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write .",
     "test": "vitest",
     "test:watch": "vitest --watch",
-    "version": "npm run build",
     "release:patch": "npm version patch && git push --follow-tags && npm publish",
     "release:minor": "npm version minor && git push --follow-tags && npm publish",
     "release:major": "npm version major && git push --follow-tags && npm publish",
