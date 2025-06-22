@@ -1,0 +1,56 @@
+{
+  "name": "git-commit-pro",
+  "version": "0.1.0",
+  "description": "A CLI tool to generate conventional commit messages easily and professionally",
+  "scripts": {
+    "dev": "tsup src/index.ts --watch --onSuccess \"node dist/index.js\"",
+    "build": "tsup src/index.ts --dts",
+    "prepare": "npm run build",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "version": "npm run build",
+    "release:patch": "npm version patch && git push --follow-tags && npm publish",
+    "release:minor": "npm version minor && git push --follow-tags && npm publish",
+    "release:major": "npm version major && git push --follow-tags && npm publish"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "cli",
+    "conventional-commits",
+    "tool",
+    "interactive",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "Orian Cros <orian.ea15@gmail.com>",
+  "bin": {
+    "gitc": "dist/index.js"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "commander": "^11.0.0",
+    "inquirer": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.8",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orianc/git-commit-pro"
+  },
+  "bugs": {
+    "url": "https://github.com/orianc/git-commit-pro/issues"
+  },
+  "homepage": "https://github.com/orianc/git-commit-pro#readme"
+}
