@@ -16,5 +16,6 @@ __tests__/
 .idea/
 coverage/
 
+tsup.config.ts
 .DS_Store
 *.log
