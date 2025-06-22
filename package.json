@@ -1,5 +1,5 @@
 {
-  "name": "git-commit-pro",
+  "name": "@orianc/git-commit-pro",
   "version": "0.2.1",
   "description": "A CLI tool to generate conventional commit messages easily and professionally",
   "scripts": {
@@ -9,12 +9,17 @@
     "format": "prettier --write .",
     "test": "vitest",
     "test:watch": "vitest --watch",
-    "release:patch": "npm version patch && git push --follow-tags && npm publish",
-    "release:minor": "npm version minor && git push --follow-tags && npm publish",
-    "release:major": "npm version major && git push --follow-tags && npm publish",
+    "release:patch": "npm version patch && git push --follow-tags",
+    "release:minor": "npm version minor && git push --follow-tags",
+    "release:major": "npm version major && git push --follow-tags",
     "dev:link": "npm link",
     "dev:unlink": "npm unlink -g git-commit-pro"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
     "git",
     "commit",
@@ -55,5 +60,8 @@
   "bugs": {
     "url": "https://github.com/orianc/git-commit-pro/issues"
   },
-  "homepage": "https://github.com/orianc/git-commit-pro#readme"
+  "homepage": "https://github.com/orianc/git-commit-pro#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
