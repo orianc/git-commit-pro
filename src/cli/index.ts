@@ -5,8 +5,10 @@ import { buildCommitMessage } from "../core/buildMessage";
 import { runGitCommit } from "../utils/execGit";
 import { COMMIT_TYPES } from "../constants/commitTypes";
 import { loadConfig } from "../config/loadConfig";
+import { checkForUpdate } from "../utils/checkForUpdate";
 
 const program = new Command();
+checkForUpdate();
 
 program
   .name("gitc")
