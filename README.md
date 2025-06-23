@@ -12,6 +12,8 @@
 
 A CLI tool to write clear and conventional commit messages in seconds.
 
+👉 [Watch demo video](./demo.mov)
+
 ## Features
 
 - Supports [Conventional Commits](https://www.conventionalcommits.org)
