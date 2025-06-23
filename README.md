@@ -12,8 +12,6 @@
 
 A CLI tool to write clear and conventional commit messages in seconds.
 
-👉 [Watch demo video](./demo.mov)
-
 ## Features
 
 - Supports [Conventional Commits](https://www.conventionalcommits.org)
@@ -21,6 +19,11 @@ A CLI tool to write clear and conventional commit messages in seconds.
 - Optional `.gitcommitrc.json` config to customize allowed commit types
 - Written in TypeScript with tests using vitest
 - Works globally via npm i -g git-commit-pro
+
+## Demo
+
+<img src="./assets/screenshot1.png" alt="demo">
+<img src="./assets/screenshot2.png" alt="demo">
 
 ## Installation
 
