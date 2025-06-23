@@ -1,5 +1,15 @@
 # git-commit-pro
 
+[![npm version](https://img.shields.io/npm/v/git-commit-pro.svg)](https://www.npmjs.com/package/git-commit-pro)
+[![license](https://img.shields.io/npm/l/git-commit-pro.svg)](https://github.com/orianc/git-commit-pro/blob/main/LICENSE)
+[![downloads](https://img.shields.io/npm/dm/git-commit-pro.svg)](https://www.npmjs.com/package/git-commit-pro)
+
+[![Node](https://img.shields.io/node/v/git-commit-pro)](https://nodejs.org)
+[![Types](https://img.shields.io/npm/types/git-commit-pro)](https://www.npmjs.com/package/git-commit-pro)
+[![Install size](https://badgen.net/packagephobia/install/git-commit-pro)](https://packagephobia.com/result?p=git-commit-pro)
+[![GitHub issues](https://img.shields.io/github/issues/orianc/git-commit-pro)](https://github.com/orianc/git-commit-pro/issues)
+[![GitHub stars](https://img.shields.io/github/stars/orianc/git-commit-pro)](https://github.com/orianc/git-commit-pro/stargazers)
+
 A CLI tool to write clear and conventional commit messages in seconds.
 
 ## Features
