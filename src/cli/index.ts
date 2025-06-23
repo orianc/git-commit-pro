@@ -83,13 +83,12 @@ program
       scope: opts.scope || answers.scope,
       message: opts.message || answers.message,
       breaking: answers.breaking,
-      description: answers.description,
     });
 
     if (opts.dryRun) {
       console.log("🔍 Dry run:\n", finalMessage);
     } else {
-      runGitCommit(finalMessage);
+      runGitCommit(finalMessage, answers.description);
     }
   });
 

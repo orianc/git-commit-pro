@@ -3,5 +3,4 @@ export interface CommitOptions {
   scope?: string;
   message: string;
   breaking?: boolean;
-  description?: string;
 }
