@@ -14,9 +14,15 @@ program
   .option("-t, --type <type>", "Commit type")
   .option("-s, --scope <scope>", "Commit scope")
   .option("-m, --message <message>", "Commit message")
+  .option("-v, --version", "Show version")
   .option("--dry-run", "Show the result without committing")
   .option("--types", "Show commit type descriptions")
   .action(async (opts) => {
+    if (opts.version) {
+      const pkg = require("../../package.json");
+      console.log(`gitc v${pkg.version}`);
+      return;
+    }
     if (opts.types) {
       console.log("\n📘 Conventional Commit Types:");
       COMMIT_TYPES.forEach(({ type, description }) => {
